@@ -1,49 +1,100 @@
 <!doctype html>
-<html>
+<html lang="pl">
 <head>
-      <meta charset="utf-8">
-      <meta name="description" content="Tu wpisz opis zawartości strony">
-      <title>Zadanie 4_3</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="Sprawdzanie anagramów – program w C++">
+    <title>Zadanie 4_3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #E6EDCA;
+            font-family: 'Inter', sans-serif;
+        }
+
+        img {
+            float: left;
+            width: 50%;
+            margin: 10px 20px 10px 10px;
+        }
+    </style>
 </head>
-<body style="background-color: #E6EDCA; font-family:'Inter';">
-<span style="font-size:xx-large","color:#5E27F" >
-Kod sprawdzający, czy podane słowa są anagrami słów związanych z tenisem
-</span> <br>
-<span style="font-size:large">
-<b>Anagram </b>toAnagram to wyraz lub wyrażenie powstałe przez przestawienie liter innego wyrazu w taki sposób, aby użyte zostały dokładnie te same znaki, lecz w innej kolejności.<br>
-Przykładem anagramów są słowa „kort” i „trok”, które składają się z identycznego zestawu liter...
-</span> <br>
+
+<body>
+
+<h1 style="color: #5E27F;">
+    Kod sprawdzający, czy podane słowa są anagramami słów związanych z tenisem
+</h1>
+
+<p style="font-size: large;">
+    <b>Anagram</b> to wyraz lub wyrażenie powstałe przez przestawienie liter innego wyrazu
+    w taki sposób, aby użyte zostały dokładnie te same znaki, lecz w innej kolejności.
+    <br>
+    Przykładem anagramów są słowa „kort” i „trok”, które składają się z identycznego
+    zestawu liter.
+</p>
+
 <hr>
-<span style="font-size:large">
-Program napisany w c++:<br>
-<style>
-img{
-float: left;
-width: 50%;
-margin: 10px 20px 10px 10px;
-}
-</style>
-<img src="Zadanie4_3.png" >
-</span> <br>
-Program napisany w języku C++ służy do sprawdzania, czy podane pary wyrazów są anagramami, czyli czy składają się z tych samych liter, ale ułożonych w innej kolejności. Na początku program dołącza niezbędne biblioteki, które umożliwiają wypisywanie tekstu na ekran oraz sortowanie znaków w napisach. Następnie zdefiniowana zostaje funkcja o nazwie „czy_anagram”, która przyjmuje dwa napisy jako argumenty i zwraca wartość logiczną prawda lub fałsz. Funkcja ta najpierw porównuje długości obu napisów, ponieważ jeśli mają one różną liczbę znaków, nie mogą być anagramami. Jeżeli długości są takie same, funkcja sortuje litery w obu napisach w kolejności alfabetycznej, a następnie sprawdza, czy po sortowaniu napisy są identyczne. Jeśli tak, oznacza to, że wyrazy są anagramami. W głównej części programu, czyli w funkcji main, znajduje się tablica zawierająca osiem słów, które są sprawdzane parami. Program przechodzi przez tę tablicę za pomocą pętli, analizując kolejne pary wyrazów. Dla każdej pary wywoływana jest funkcja sprawdzająca anagramy, a wynik sprawdzenia jest wypisywany na ekran. Jeśli słowa są anagramami, program wyświetla odpowiednią informację, a jeśli nie — informuje, że dana para nie spełnia tego warunku. Na końcu program kończy swoje działanie, zwracając wartość zero, co oznacza poprawne zakończenie działania aplikacji.
-<span>
-<h4><b><i>Podsumowanie</i></b></h4></span> Program stanowi przykład praktycznego wykorzystania funkcji sortowania oraz operacji na napisach w języku C++.</span>
+
+<h2>Program napisany w C++</h2>
+
+<img src="Zadanie4_3.png" alt="Kod programu w C++">
+
+<p>
+    Program napisany w języku C++ służy do sprawdzania, czy podane pary wyrazów są
+    anagramami, czyli czy składają się z tych samych liter, ale ułożonych w innej
+    kolejności. Na początku program dołącza niezbędne biblioteki, które umożliwiają
+    wypisywanie tekstu na ekran oraz sortowanie znaków w napisach.
+</p>
+
+<p>
+    Następnie zdefiniowana zostaje funkcja <b>czy_anagram</b>, która przyjmuje dwa napisy
+    jako argumenty i zwraca wartość logiczną prawda lub fałsz. Funkcja ta najpierw
+    porównuje długości obu napisów, ponieważ jeśli mają one różną liczbę znaków, nie
+    mogą być anagramami.
+</p>
+
+<p>
+    Jeżeli długości są takie same, funkcja sortuje litery w obu napisach w kolejności
+    alfabetycznej, a następnie sprawdza, czy po sortowaniu napisy są identyczne.
+    Jeśli tak, oznacza to, że wyrazy są anagramami.
+</p>
+
+<p>
+    W funkcji <b>main</b> znajduje się tablica zawierająca osiem słów, które są
+    sprawdzane parami. Program przechodzi przez tablicę za pomocą pętli, analizując
+    kolejne pary wyrazów i wypisując wynik na ekran.
+</p>
+
 <div style="clear: both;"></div>
+
+<h3><i>Podsumowanie</i></h3>
+<p>
+    Program stanowi przykład praktycznego wykorzystania funkcji sortowania oraz
+    operacji na napisach w języku C++.
+</p>
+
 <hr>
-<span style="font-size:xx-large"> Nagranie audio </span> <br>
-<audio src="" Controls></audio><br>
-	<hr>
-	<span style="font-size:xx-large"> Nagranie video </span> <br>
-<video width="640" height="360" controls> <source src="Zadanie4_3_2 (online-video-cutter.com).mp4" type="video/mp4"> </video>
-	<hr>
 
+<h2>Nagranie audio</h2>
+<audio controls></audio>
 
+<hr>
 
-<span style="font-size:xx-large"> Materiały z których korzystałam </span> <br>
-<a href="https://www.algorytm.edu.pl/algorytmy-maturalne/algorytm-eulkidesa.html">Materiały z których korzystałam</a>
+<h2>Nagranie video</h2>
+<video width="640" height="360" controls>
+    <source src="Zadanie4_3_2 (online-video-cutter.com).mp4" type="video/mp4">
+</video>
+
+<hr>
+
+<h2>Materiały, z których korzystałam</h2>
+<a href="https://www.algorytm.edu.pl/algorytmy-maturalne/algorytm-eulkidesa.html">
+    Algorytm – materiały pomocnicze
+</a>
+
 </body>
-
 </html>
