@@ -1,1 +1,140 @@
 
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />   
+  <title>Zadanie 6_1- kalkulator i BMI</title>
+  <link rel="shortcut icon" href="tennis.png" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<style>
+.top-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.top-container p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+</style>
+</head>
+<body style="background-color: #E6EDCA; font-family:'Inter';">
+<p style="text-align: left;"> <a href="https://marcelkazetofficial.github.io/" title="Powrót do strony głównej"  font-size: 14px; style="color: #E010BB">Powrót do strony głównej</a> </p>
+<span style font-size: 16px; color: black;"><h1><b> Zadanie - kalkulator </b></h1></span>
+
+<script language="JavaScript">
+
+function dodawanie() {
+var skl1=parseFloat(document.Dodawanie.a.value);
+var skl2=parseFloat(document.Dodawanie.b.value);
+var wynik = skl1+skl2;
+alert(wynik);
+}
+</script>
+<form name="Dodawanie">
+a=<input type="Text" name="a"><br>
+b=<input type="Text" name="b"><br>
+<input type="Button" value="Oblicz sumę" onclick="dodawanie()">
+</form>
+<hr style="border: none; height: 2px; background-color: black;">
+
+<script language="JavaScript">
+function odejmowanie() {
+var skl1=parseFloat(document.forms[1].elements[0].value);
+var skl2=parseFloat(document.forms[1].elements[1].value);
+var wynik = skl1-skl2;
+alert(wynik);
+}
+</script>
+<form name="Odejmowanie">
+a=<input type="Text" name="liczba_a"><br>
+b=<input type="Text" name="liczba_b"><br>
+<input type="Button" value="Oblicz różnicę" onclick="odejmowanie()">
+</form>
+<hr style="border: none; height: 2px; background-color: black;">
+
+<script language="JavaScript">
+function mnożenie() {
+var skl1=parseFloat(document.forms[2].elements[0].value);
+var skl2=parseFloat(document.forms[2].elements[1].value);
+var wynik = skl1*skl2;
+alert(wynik);
+}
+</script>
+<form name="Mnożenie">
+a=<input type="Text" name="liczba1"><br>
+b=<input type="Text" name="liczba2"><br>
+<input type="Button" value="Oblicz iloczyn" onclick="mnożenie()">
+</form>
+<hr style="border: none; height: 2px; background-color: #8B008B;">
+
+<script language="JavaScript">
+function dzielenie() {
+var skl1=parseFloat(document.forms[3].elements[0].value);
+var skl2=parseFloat(document.forms[3].elements[1].value);
+if (skl2==0) alert('Nie można dzielić przez 0');
+else {var wynik = skl1/skl2;
+ alert(wynik);}
+}
+</script>
+<form name="Dzielenie">
+a=<input type="Text" name="liczba1"><br>
+b=<input type="Text" name="liczba2"><br>
+<input type="Button" value="Oblicz iloraz" onclick="dzielenie()">
+</form>
+<hr style="border: none; height: 2px; background-color: #8B008B;"><br>
+
+<script language="JavaScript">
+function BMI() {
+var skl1=parseFloat(document.forms[4].elements[0].value);
+var skl2=parseFloat(document.forms[4].elements[1].value);
+var wynik = skl1/(skl2*skl2);
+alert(wynik.toFixed(2));
+if(wynik<18.5) alert('niedowaga');
+else if (wynik<25) alert('waga prawidłowa');
+else if (wynik<30) alert('nadwaga');
+else alert('otyłość');
+}
+</script>
+<form name="Wskaźnik BMI">
+Podaj masę ciała w kilogramach:<input type="Text" name="masa"><br>
+Podaj wzrost w metrach:<input type="Text" name="wzrost"><br>
+<input type="Button" value="Oblicz wskaźnik BMI" onclick="BMI()">
+</form>
+<hr style="border: none; height: 2px; background-color: #8B008B;" >
+
+<form>
+Podaj imię:<input type="Text" name="imię"><br>
+<br>Podaj hasło:<input type="Password" name="hasło"><br>
+<br>Podaj ulubione owoce:<br><input type="checkbox" name="owoce" value="ja" checked> Jabłko<br>
+<input type="checkbox" name="owoce" value="gr"> Gruszka<br>
+<input type="checkbox" name="owoce" value="tr"> Truskawka<br>
+<input type="checkbox" name="owoce" value="sl"> Śliwka<br>
+<input type="checkbox" name="owoce" value="ma"> Malina<br>
+<input type="checkbox" name="owoce" value="wi"> Wiśnia<br>
+<input type="checkbox" name="owoce" value="cz"> Czereśnia<br>
+<br>Wybierz kolor: <br><input type="radio" name="kolory" value="biał"> Biały<br>
+<input type="radio" name="kolory" value="czar"> Czarny<br>
+<input type="radio" name="kolory" value="czer"> Czerwony<br>
+<input type="radio" name="kolory" value="nieb"> Niebieski<br>
+<input type="radio" name="kolory" value="żółt"> Żółty<br>
+<input type="radio" name="kolory" value="sreb"> Srebrny<br>
+<input type="radio" name="kolory" value="złot"> Złoty<br>
+<br>Wybierz ulubiony przedmiot: 
+<br><select name="przedmioty">
+	<option>Matematyka</option>
+	<option>Informatyka</option>
+	<option>Język angielski</option>
+	<option>Język polski</option>
+</select>
+<input type="Button" value="Wyślij"> 
+</form>
+</span>
+<br><br><hr style="border: none; height: 2px; background-color: #8B008B;">
+</body>
+</html>
