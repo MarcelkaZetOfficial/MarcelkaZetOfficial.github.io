@@ -22,6 +22,28 @@
     margin: 0;
 }
 </style>
+	<script type="text/javascript">
+function weryfikuj_masa(m) {
+    m = Number(m);
+
+    if (isNaN(m)) {
+        alert("Podaj liczbę!");
+    } else if (m <= 0 || m >= 200) {
+        alert("Masa ciała musi być większa niż 0 kg i mniejsza niż 200 kg!");
+    }
+}
+
+function weryfikuj_wzrost(w) {
+    w = Number(w);
+
+    if (isNaN(w)) {
+        alert("Podaj liczbę!");
+    } else if (w < 1 || w > 2.5) {
+        alert("Wzrost musi być większy niż 1 m i mniejszy niż 2,5 m!");
+    }
+}
+</script>
+
 </head>
 <body style="background-color: #E6EDCA; font-family:'Inter';">
 <p style="text-align: left;"> <a href="https://marcelkazetofficial.github.io/" title="Powrót do strony głównej"  font-size: 14px; style="color: #E010BB">Powrót do strony głównej</a> </p>
@@ -102,8 +124,11 @@ else alert('otyłość');
 }
 </script>
 <form name="Wskaźnik BMI">
-Podaj masę ciała w kilogramach:<input type="Text" name="masa"><br>
-Podaj wzrost w metrach:<input type="Text" name="wzrost"><br>
+Podaj masę ciała w kilogramach:<input type="Text" name="masa" onchange "weryfikuj_masa(this.value);">*<br>
+Podaj wzrost w metrach:<input type="Text" name="wzrost" onchange = "weryfikuj_wzrost(this.value);">*<br>
+<p>Czy ważyłaś się/ważyłeś się chwilę po zjedzeniu posiłku></p><br<span style = "font-size: 12px">(Jeżeli tak, to w obliczeniach bmi pod uwagę będzie wzięta masa o 2 kg mniejsza.)</span><br> 
+<input type = "radio" name "posilek" value "Tak"> Tak <br>
+<input type = "radio" name "posilek" value "Nie"> Nie <br>
 <input type="Button" value="Oblicz wskaźnik BMI" onclick="BMI()">
 </form>
 <hr style="border: none; height: 2px; background-color: #8B008B;" >
