@@ -131,6 +131,25 @@ Podaj wzrost w metrach:<input type="Text" name="wzrost" onchange = "weryfikuj_wz
 <input type = "radio" name "posilek" value "Nie"> Nie <br>
 <input type="Button" value="Oblicz wskaźnik BMI" onclick="BMI()">
 </form>
+	<script>
+function BMI() {
+
+    let masa = parseFloat(document.getElementById("masa").value);
+    let wzrost = parseFloat(document.getElementById("wzrost").value);
+
+    let posilek = document.querySelector('input[name="posilek"]:checked').value;
+
+    if (posilek === "tak") {
+        masa = masa - 2;
+    }
+
+    let bmi = masa / (wzrost * wzrost);
+
+    document.getElementById("wynik").innerHTML =
+        "Twoje BMI wynosi: " + bmi.toFixed(2);
+}
+</script>
+
 <hr style="border: none; height: 2px; background-color: #8B008B;" >
 
 <form>
