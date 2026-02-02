@@ -93,7 +93,7 @@ a=<input type="Text" name="liczba1"><br>
 b=<input type="Text" name="liczba2"><br>
 <input type="Button" value="Oblicz iloczyn" onclick="mnożenie()">
 </form>
-<hr style="border: none; height: 2px; background-color: #8B008B;">
+<hr style="border: none; height: 2px; background-color: black;">
 
 <script language="JavaScript">
 function dzielenie() {
@@ -109,40 +109,35 @@ a=<input type="Text" name="liczba1"><br>
 b=<input type="Text" name="liczba2"><br>
 <input type="Button" value="Oblicz iloraz" onclick="dzielenie()">
 </form>
-<hr style="border: none; height: 2px; background-color: #8B008B;"><br>
-
+<hr style="border: none; height: 2px; background-color: black;"><br>
 <script language="JavaScript">
 function BMI() {
 var skl1=parseFloat(document.forms[4].elements[0].value);
 var skl2=parseFloat(document.forms[4].elements[1].value);
+var posilek = document.forms[4].posilek.value;
+if (posilek === "Tak") skl1=skl1-2;
 var wynik = skl1/(skl2*skl2);
 alert(wynik.toFixed(2));
-if(wynik<18.5) alert('niedowaga');
-else if (wynik<25) alert('waga prawidłowa');
-else if (wynik<30) alert('nadwaga');
-else alert('otyłość');
+if(wynik<18.5) alert('Niedowaga');
+else if (wynik<25) alert('Waga prawidłowa');
+else if (wynik<30) alert('Nadwaga');
+else alert('Otyłość');
 }
 </script>
 <form name="Wskaźnik BMI">
 Podaj masę ciała w kilogramach:
 <input type="Text" name="masa" onchange="weryfikuj_masa(this.value);">*<br>
-
 Podaj wzrost w metrach:
 <input type="Text" name="wzrost" onchange="weryfikuj_wzrost(this.value);">*<br>
-
 <p>Czy ważyłaś się/ważyłeś się chwilę po zjedzeniu posiłku</p>
 <span style="font-size: 12px">
 (Jeżeli tak, to w obliczeniach bmi pod uwagę będzie wzięta masa o 2 kg mniejsza.)
 </span><br> 
-
 <input type="radio" name="posilek" value="Tak"> Tak <br>
 <input type="radio" name="posilek" value="Nie"> Nie <br>
-
 <input type="Button" value="Oblicz wskaźnik BMI" onclick="BMI()">
 </form>
-	
-<hr style="border: none; height: 2px; background-color: #8B008B;" >
-
+<hr style="border: none; height: 2px; background-color: black;" >
 <form>
 Podaj imię:<input type="Text" name="imię"><br>
 <br>Podaj hasło:<input type="Password" name="hasło"><br>
@@ -170,6 +165,6 @@ Podaj imię:<input type="Text" name="imię"><br>
 <input type="Button" value="Wyślij"> 
 </form>
 </span>
-<br><br><hr style="border: none; height: 2px; background-color: #8B008B;">
+<br><br><hr style="border: none; height: 2px; background-color: black;">
 </body>
 </html>
